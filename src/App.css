@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: aliceblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-label {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-primary {
+  margin-top: 20px;
+}
+
+.add-more-btn {
+  margin-top: 10px;
+}
+
+.skill-tags {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.skill-tag {
+  background-color: #eaeaea;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skill-tag:hover {
+  background-color:#4ac5a6;
 }
+
+.section-heading {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section-container {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.add-more-section-btn {
+  margin-top: 10px;
+}
+
+.text-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.text-container input[type="text"],
+.text-container textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.text-container input[type="text"]:focus,
+.text-container textarea:focus {
+  outline: none;
+}
+
+.text-container textarea {
+  resize: vertical;
+}
+
