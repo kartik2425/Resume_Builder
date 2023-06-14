@@ -64,12 +64,11 @@ const ResumeForm = (props) => {
   return (
     <form class="container" onSubmit={handleSubmit(onSubmit)}>
       <h1>Create Resume</h1>
-      return (
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h1>Create Resume</h1>
+    
 
         {/* Personal Information */}
         <h2>Personal Information</h2>
+      
         <div>
           <label htmlFor="name">Name</label>
           <Field name="name" component="input" type="text" />
@@ -79,18 +78,18 @@ const ResumeForm = (props) => {
           <Field name="email" component="input" type="email" />
         </div>
         <div>
-          <label htmlFor="address">Address</label>
+          <label  htmlFor="address">Address</label>
           <Field name="address" component="input" type="text" />
         </div>
         <div>
           <label htmlFor="phone">Phone</label>
           <Field name="phone" component="input" type="tel" />
         </div>
-
+   
         {/* Education */}
         <h2>Education</h2>
         {education.map((edu, index) => (
-          <div key={index}>
+          <div class="text-container"  key={index}>
             <label htmlFor={`education[${index}].institute`}>Institute</label>
             <Field
               name={`education[${index}].institute`}
@@ -99,7 +98,9 @@ const ResumeForm = (props) => {
               onChange={(event) =>
                 handleFieldChange(index, education, setEducation, event)
               }
+             
             />
+             <br></br>
             <label htmlFor={`education[${index}].year`}>Year</label>
             <Field
               name={`education[${index}].year`}
@@ -109,6 +110,7 @@ const ResumeForm = (props) => {
                 handleFieldChange(index, education, setEducation, event)
               }
             />
+             <br></br>
             <label htmlFor={`education[${index}].degree`}>Degree</label>
             <Field
               name={`education[${index}].degree`}
@@ -118,6 +120,7 @@ const ResumeForm = (props) => {
                 handleFieldChange(index, education, setEducation, event)
               }
             />
+             <br></br>
             {index > 0 && (
               <button
                 type="button"
@@ -140,7 +143,7 @@ const ResumeForm = (props) => {
         {/* Experience */}
         <h2>Experience</h2>
         {experience.map((exp, index) => (
-          <div key={index}>
+          <div class="text-container" key={index}>
             <label htmlFor={`experience[${index}].company`}>Company</label>
             <Field
               name={`experience[${index}].company`}
@@ -150,6 +153,7 @@ const ResumeForm = (props) => {
                 handleFieldChange(index, experience, setExperience, event)
               }
             />
+             <br></br>
             <label htmlFor={`experience[${index}].year`}>Year</label>
             <Field
               name={`experience[${index}].year`}
@@ -159,6 +163,7 @@ const ResumeForm = (props) => {
                 handleFieldChange(index, experience, setExperience, event)
               }
             />
+             <br></br>
             <label htmlFor={`experience[${index}].designation`}>
               Designation
             </label>
@@ -170,6 +175,7 @@ const ResumeForm = (props) => {
                 handleFieldChange(index, experience, setExperience, event)
               }
             />
+             <br></br>
             {index > 0 && (
               <button
                 type="button"
@@ -212,8 +218,6 @@ const ResumeForm = (props) => {
         {/* Submit button */}
         <button type="submit">Submit</button>
       </form>
-      );
-    </form>
   );
 };
 

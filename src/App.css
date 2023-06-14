@@ -64,11 +64,12 @@
 
 .text-container input[type="text"],
 .text-container textarea {
-  width: 100%;
+  width: 5px;
   border: none;
   background-color: transparent;
   padding: 5px;
   font-size: 14px;
+  height: 20px;
 }
 
 .text-container input[type="text"]:focus,
